@@ -1,11 +1,11 @@
 package app;
 
-import common.DatabaseConnection;
+import authentication.LoginController;
 
 public class Main {
-
     public static void main(String[] args) {
 
-        DatabaseConnection.getConnection();
+        LoginController loginController = new LoginController();
+        loginController.startLogin();
     }
 }
