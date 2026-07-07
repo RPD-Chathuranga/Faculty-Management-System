@@ -62,7 +62,7 @@ public class LoginView extends Application {
 
         Label faculty =
                 new Label(
-                        "Faculty of Commerce &\nManagement Studies"
+                        "Faculty of Computing and Technology"
                 );
 
 
