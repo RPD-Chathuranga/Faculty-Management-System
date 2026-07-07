@@ -1,11 +1,11 @@
 package app;
 
-import authentication.LoginController;
+import authentication.LoginView;
+import javafx.application.Application;
 
 public class Main {
-    public static void main(String[] args) {
 
-        LoginController loginController = new LoginController();
-        loginController.startLogin();
+    public static void main(String[] args) {
+        Application.launch(LoginView.class, args);
     }
 }
