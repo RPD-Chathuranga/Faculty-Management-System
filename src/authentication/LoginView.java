@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import dashboard.DashboardView;
 
 
 public class LoginView extends Application {
@@ -293,34 +294,32 @@ public class LoginView extends Application {
 
 
 
-            if(success){
-
+            if (success) {
 
                 Alert alert =
                         new Alert(
                                 Alert.AlertType.INFORMATION
                         );
 
-
                 alert.setTitle(
                         "Login Successful"
                 );
 
-
                 alert.setHeaderText(null);
-
 
                 alert.setContentText(
                         "Welcome "
                                 + UserSession.fullName
-                                + "\nRole : "
+                                + "\nRole: "
                                 + UserSession.role
                 );
 
-
                 alert.showAndWait();
 
+                DashboardView dashboardView =
+                        new DashboardView(stage);
 
+                dashboardView.show();
             }
 
             else{
